@@ -1,0 +1,107 @@
+#repoupdater-settings {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+    margin-top: 2em;
+}
+
+#repoupdater-settings ul.tabs {
+    box-sizing: border-box;
+    width: 150px;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid rgba(0, 0, 0, .15);
+}
+
+#repoupdater-settings ul.tabs li {
+    margin: 0;
+}
+
+#repoupdater-settings ul.tabs li + li {
+    margin-top: -1px;
+}
+
+#repoupdater-settings ul.tabs a {
+    display: block;
+    margin-right: -1px; 
+    padding: 7px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+#repoupdater-settings ul.tabs a:hover,
+#repoupdater-settings ul.tabs a.active {
+    border-color: rgba(0, 0, 0, .15);
+    border-right-color: #f1f1f1;
+    background: linear-gradient(to right, #fff, transparent);
+}
+
+#repoupdater-settings ul.tabs a.active {
+    color: #23282d;
+}
+
+#repoupdater-settings ul.tabs a.github,
+#repoupdater-settings ul.tabs a.bitbucket {
+    position: relative;
+    padding-left: calc(16px + 7px + .42em);
+    color: #46b450;
+}
+
+#repoupdater-settings ul.tabs a.github:before,
+#repoupdater-settings ul.tabs a.bitbucket:before {
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    width: 16px;
+    height: 16px;
+    content: "";
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    background: none no-repeat scroll center center transparent;
+    background-size: cover;
+}
+
+#repoupdater-settings ul.tabs a.github:before {
+    background: url(https://www.google.com/s2/favicons?domain=https://github.com) no-repeat scroll center center transparent;
+}
+
+#repoupdater-settings ul.tabs a.bitbucket:before {
+    background: url(https://www.google.com/s2/favicons?domain=https://bitbucket.com) no-repeat scroll center center transparent;
+}
+
+#repoupdater-settings ul.tabs a.error {
+    color: #dc3232;
+}
+
+#repoupdater-settings .panels {
+    padding-left: 20px;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+            flex-grow: 1;
+}
+
+#repoupdater-settings .panels table thead td {
+    padding: 0;
+}
+
+#repoupdater-settings .panels table thead div {
+    margin-bottom: 15px; 
+    padding: 1px 12px;
+    border-left: 4px solid #dc3232;
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+}
+
+#repoupdater-settings .panels table thead p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: .5em 0;
+    padding: 2px;
+}
+
+#repoupdater-settings .panels table:not(.active) {
+    display: none;
+}
+
+/*# sourceMappingURL=settings.css.map */
