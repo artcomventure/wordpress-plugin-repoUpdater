@@ -34,11 +34,8 @@ function repoupdater__site_transient_update_plugins( $value ) {
 	$plugin_file = plugin_basename( REPOUPDATER_PLUGIN_FILE );
 
 	// remove this' plugin entry (in case of name conflict with existing https://wordpress.org/plugins/ plugin)
-	foreach ( array( 'response', 'no_update' ) as $group ) {
-		if ( isset( $value->{$group}[ $plugin_file ] ) ) {
-			unset( $value->{$group}[ $plugin_file ] );
-			break;
-		}
+	if ( isset( $value->response[ $plugin_file ] ) ) {
+		unset( $value->response[ $plugin_file ] );
 	}
 
 	// check all plugins
@@ -80,6 +77,22 @@ function repoupdater__site_transient_update_plugins( $value ) {
 	}
 
 	return $value;
+}
+
+/**
+ * Change details link to GitHub repository.
+ */
+add_filter( 'plugin_row_meta', 'repoupdater__plugin_row_meta', 10, 2 );
+function repoupdater__plugin_row_meta( $links, $file ) {
+	if ( plugin_basename( __FILE__ ) == $file ) {
+		$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $file );
+
+		$links[2] = '<a href="' . $plugin_data['PluginURI'] . '">' . __( 'Plugin-Seite aufrufen' ) . '</a>';
+
+		$links[] = '<a href="' . admin_url( 'plugins.php?page=repoupdater-settings' ) . '">' . __( 'Settings' ) . '</a>';
+	}
+
+	return $links;
 }
 
 /**

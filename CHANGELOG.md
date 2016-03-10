@@ -4,6 +4,11 @@
 
 * Add https://bitbucket.com support
 
+## 1.0.3 - 2016-03-10
+**Added**
+
+* ... and changed 'Plugins' screen links
+
 ## 1.0.2 - 2016-03-10
 **Changed**
 

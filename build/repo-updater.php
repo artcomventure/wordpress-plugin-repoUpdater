@@ -4,7 +4,7 @@
  * Plugin Name: Repository Updater
  * Plugin URI: https://github.com/artcomventure/wordpress-plugin-repoUpdater/
  * Description: Update plugins directly from GitHub.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Text Domain: repoupdater
  * Author: artcom venture GmbH
  * Author URI: http://www.artcom-venture.de/
