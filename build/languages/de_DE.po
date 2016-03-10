@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Repository Updater\n"
+"Report-Msgid-Bugs-To: info@artcom-venture.de\n"
+"POT-Creation-Date: 2016-03-04 09:19+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-03-10 10:21+0100\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: artcom venture GmbH <info@artcom-venture.de>\n"
+"X-Generator: Poedit 1.8.7\n"
+"Last-Translator: Stefan Käsche <stefan.kaesche@artcom-venture.de>\n"
+"Language: de\n"
+
+msgid "Update plugins directly from GitHub."
+msgstr "Aktualisieren Sie Plugins direkt von GitHub."
+
+msgid "Connect your WordPress plugins with the corresponding repositories on GitHub. Select the branch you want to use (default is 'master') and define opionally the subfolder the plugin files are located. Once configured you can update the plugin via the <a href=\"%1$s\">Plugins page</a> as usual."
+msgstr "Verknüpfen Sie Ihre Plugins mit den entsprechenden Repositories auf GitHub. Wählen Sie den zu nutzenden Branch (Standard ist 'master') und geben Sie optional den Unterordner an in dem sich die Plugin-Dateien befinden. Einmal eingerichtet, können Sie die Plugins wie gewohnt über die <a href=\"%1$s\">Plugins-Seite</a> aktualisieren."
+
+msgid "Connection to GitHub repository failed."
+msgstr "Verbindung zur GitHub Quelle fehlgeschlagen."
+
+msgid "Please check settings."
+msgstr "Bitte überprüfen Sie die Einstellungen."
+
+msgid "Please check settings for: %1$s"
+msgstr "Bitte überprüfen Sie die Einstellungen für: %1$s"
+
+msgid "Branch or Release"
+msgstr "Branch oder Release"
+
+msgid "Which one you want to use? Default is 'master'."
+msgstr "Welchen wollen Sie nutzen? Standard ist 'master'."
+
+msgid "Subfolder"
+msgstr "Unterordner"
+
+msgid "In case WordPress plugin files are not in repository's root directory."
+msgstr "Für den Fall, dass sich die WordPress-Plugin-Dateien nicht im root-Ordner befinden."

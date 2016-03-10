@@ -1,0 +1,39 @@
+"Project-Id-Version: GitHub Updater\n"
+"Report-Msgid-Bugs-To: info@artcom-venture.de\n"
+"POT-Creation-Date: 2016-03-04 09:19+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-04-14 14:53+0100\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: artcom venture GmbH <info@artcom-venture.de>\n"
+"Language-Team: artcom venture GmbH <info@artcom-venture.de>\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 1.8.7\n"
+
+msgid "Update plugins directly from GitHub."
+msgstr ""
+
+msgid "Connect your WordPress plugins with the corresponding repositories on GitHub. Select the branch you want to use (default is 'master') and define opionally the subfolder the plugin files are located. Once configured you can update the plugin via the <a href=\"%1$s\">Plugins page</a> as usual."
+msgstr ""
+
+msgid "Connection to GitHub repository failed."
+msgstr ""
+
+msgid "Please check settings."
+msgstr ""
+
+msgid "Please check settings for: %1$s"
+msgstr ""
+
+msgid "Branch or Release"
+msgstr ""
+
+msgid "Which one you want to use? Default is 'master'."
+msgstr ""
+
+msgid "Subfolder"
+msgstr ""
+
+msgid "In case WordPress plugin files are not in repository's root directory."
+msgstr ""
