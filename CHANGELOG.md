@@ -4,6 +4,11 @@
 
 * Add https://bitbucket.com support
 
+## 1.0.2 - 2016-03-10
+**Changed**
+
+* set repo-updater subfolder on activation
+
 ## 1.0.1 - 2016-03-10
 **Added**
 

@@ -13,7 +13,10 @@ Update plugins directly from GitHub.
 
 == Description ==
 
-Keep plugins, which are not listed on https://wordpress.org/plugins/, always in sync ... **the WordPress way**.
+Keep your plugins, which are not listed on https://wordpress.org/plugins/, always in sync with the corresponding repository ... and update them **the WordPress way**.
+
+* No programming skills needed! All settings are made in the backend.
+* Works with _all_ repositories plugins. Even if sourcecode is in some subfolder (e.g. /build/).
 
 == Installation ==
 
@@ -42,9 +45,9 @@ Once activated you'll find the 'Repository Connect' settings page listed in the 
 3. Click 'Save Changes'. Your data will be validated.
 4. Go to the 'Plugins' screen, look for updates and proceed as known from WordPress.
 
-== Support of repositories hosted on ==
+== Support of ... ==
 
-* [GitHub](https://github.com) and (coming soon) [Bitbucket](https://bitbucket.com)
+* public and (coming soon) privat repositories hosted on [GitHub](https://github.com) and (coming soon) [Bitbucket](https://bitbucket.com)
 
 == Plugin Updates ==
 
@@ -57,6 +60,11 @@ _We test our plugin through its paces, but we advise you to take all safety prec
 = Unreleased =
 
 * Add https://bitbucket.com support
+
+= 1.0.2 - 2016-03-10 =
+**Changed**
+
+* set repo-updater subfolder on activation
 
 = 1.0.1 - 2016-03-10 =
 **Added**
