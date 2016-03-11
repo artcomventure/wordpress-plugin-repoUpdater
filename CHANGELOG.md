@@ -3,6 +3,16 @@
 ## Unreleased
 
 * Add https://bitbucket.com support
+* Add private support
+
+## 1.0.4 - 2016-03-11
+**Fixed**
+
+* Add plugin slug in plugin update list
+
+**Added**
+
+* .csscomb.json
 
 ## 1.0.3 - 2016-03-10
 **Added**
