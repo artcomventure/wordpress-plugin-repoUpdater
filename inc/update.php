@@ -55,9 +55,12 @@ function repoupdater__site_transient_update_plugins( $value ) {
 				}
 			}
 
+			$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );
+
 			// 'create' plugin object
 			$plugin = (object) array(
 				'plugin' => $basename,
+				'slug' => sanitize_title( $plugin_data['Name'] ),
 				'url' => $setting['URL'],
 				'package' => $setting['URL'] . 'zipball/' . ( $setting['branch'] ? $setting['branch'] : 'master' ),
 			);
