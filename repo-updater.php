@@ -4,7 +4,7 @@
  * Plugin Name: Repository Updater
  * Plugin URI: https://github.com/artcomventure/wordpress-plugin-repoUpdater/
  * Description: Update plugins directly from GitHub.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Text Domain: repoupdater
  * Author: artcom venture GmbH
  * Author URI: http://www.artcom-venture.de/
@@ -19,7 +19,7 @@ if ( ! defined( 'REPOUPDATER_PLUGIN_URL' ) ) {
 }
 
 if ( ! defined( 'REPOUPDATER_PLUGIN_DIR' ) ) {
-	define( 'REPOUPDATER_PLUGIN_DIR', dirname( __FILE__ ) );
+	define( 'REPOUPDATER_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 }
 
 /**
@@ -45,7 +45,7 @@ function repoupdater_activate() {
  */
 add_action( 'after_setup_theme', 'repoupdater__after_setup_theme' );
 function repoupdater__after_setup_theme() {
-	load_theme_textdomain( 'repoupdater', REPOUPDATER_PLUGIN_DIR . '/languages' );
+	load_theme_textdomain( 'repoupdater', REPOUPDATER_PLUGIN_DIR . 'languages' );
 }
 
 /**
@@ -103,10 +103,26 @@ function repoupdater_versions( $cache = TRUE ) {
 	return $versions;
 }
 
+/**
+ * Change details link to GitHub repository.
+ */
+add_filter( 'plugin_row_meta', 'repoupdater__plugin_row_meta', 10, 2 );
+function repoupdater__plugin_row_meta( $links, $file ) {
+	if ( plugin_basename( __FILE__ ) == $file ) {
+		$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $file );
+
+		$links[2] = '<a href="' . $plugin_data['PluginURI'] . '">' . __( 'Visit plugin site' ) . '</a>';
+
+		$links[] = '<a href="' . admin_url( 'plugins.php?page=repoupdater-settings' ) . '">' . __( 'Settings' ) . '</a>';
+	}
+
+	return $links;
+}
+
 // settings
-include( REPOUPDATER_PLUGIN_DIR . '/inc/settings.php' );
+include( REPOUPDATER_PLUGIN_DIR . 'inc/settings.php' );
 // update
-include( REPOUPDATER_PLUGIN_DIR . '/inc/update.php' );
+include( REPOUPDATER_PLUGIN_DIR . 'inc/update.php' );
 
 /**
  * Delete traces on deactivation.

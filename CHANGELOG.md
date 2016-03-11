@@ -5,6 +5,15 @@
 * Add https://bitbucket.com support
 * Add private support
 
+## 1.0.5 - 2016-03-11
+**Removed**
+
+* js detail link replacement on 'Plugins' screen
+
+**Added**
+
+* Load/show translated plugin data in settings form 
+
 ## 1.0.4 - 2016-03-11
 **Fixed**
 

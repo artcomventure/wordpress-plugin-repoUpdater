@@ -75,5 +75,5 @@ function repoupdater_settings_page() {
 	wp_enqueue_style( 'repoupdater-settings', REPOUPDATER_PLUGIN_URL . '/css/settings.css' );
 	wp_enqueue_script( 'repoupdater-settings', REPOUPDATER_PLUGIN_URL . '/js/settings.min.js' );
 
-	include( REPOUPDATER_PLUGIN_DIR . '/inc/settings.form.php' );
+	include( REPOUPDATER_PLUGIN_DIR . 'inc/settings.form.php' );
 }

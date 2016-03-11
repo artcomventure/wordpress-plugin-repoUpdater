@@ -8,6 +8,10 @@
 
 		<?php // get all plugins
 		$plugins = get_plugins();
+		foreach ( $plugins as $basename => $data ) {
+			// 'reload' plugin data to get translated strings
+			$plugins[$basename] = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );
+		}
 
 		// get master versions
 		$versions = repoupdater_versions();
@@ -52,7 +56,7 @@
 			</ul>
 
 			<div class="panels">
-				<?php foreach ( get_plugins() as $basename => $data ) : ?>
+				<?php foreach ( $plugins as $basename => $data ) : ?>
 
 					<table id="tab_<?php echo sanitize_title( $data['Name'] ); ?>" class="form-table">
 

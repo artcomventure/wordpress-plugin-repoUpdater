@@ -1,32 +1,6 @@
 <?php
 
 /**
- * Add styles and scripts to specific pages.
- */
-add_action( 'admin_enqueue_scripts', 'repoupdater_update__admin_enqueue_scripts' );
-function repoupdater_update__admin_enqueue_scripts( $hook ) {
-	if ( in_array( $hook, array(
-			'plugins.php',
-			'update-core.php'
-		) ) && ( $settings = get_transient( 'repoupdater_settings' ) )
-	) {
-		foreach ( $settings as $basename => $setting ) {
-			if ( $setting ) {
-				$repoupdater_data[ $basename ] = $setting['URL'];
-			}
-		}
-
-		// add js
-		if ( isset( $repoupdater_data ) ) {
-			wp_enqueue_script( 'repoupdater-update', REPOUPDATER_PLUGIN_URL . '/js/update.min.js', array( 'jquery' ), '20160309' );
-
-			// add data to script
-			wp_localize_script( 'repoupdater-update', 'repoupdaterData', $repoupdater_data );
-		}
-	}
-}
-
-/**
  * Git update notification.
  */
 add_filter( 'site_transient_update_plugins', 'repoupdater__site_transient_update_plugins', 100 );
@@ -80,22 +54,6 @@ function repoupdater__site_transient_update_plugins( $value ) {
 	}
 
 	return $value;
-}
-
-/**
- * Change details link to GitHub repository.
- */
-add_filter( 'plugin_row_meta', 'repoupdater__plugin_row_meta', 10, 2 );
-function repoupdater__plugin_row_meta( $links, $file ) {
-	if ( plugin_basename( __FILE__ ) == $file ) {
-		$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $file );
-
-		$links[2] = '<a href="' . $plugin_data['PluginURI'] . '">' . __( 'Plugin-Seite aufrufen' ) . '</a>';
-
-		$links[] = '<a href="' . admin_url( 'plugins.php?page=repoupdater-settings' ) . '">' . __( 'Settings' ) . '</a>';
-	}
-
-	return $links;
 }
 
 /**
