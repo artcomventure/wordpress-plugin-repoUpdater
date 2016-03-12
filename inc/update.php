@@ -29,6 +29,7 @@ function repoupdater__site_transient_update_plugins( $value ) {
 				}
 			}
 
+			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
 			$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );
 
 			// 'create' plugin object

@@ -5,6 +5,11 @@
 * Add https://bitbucket.com support
 * Add private support
 
+## 1.0.6 - 2016-03-12 [YANKED]
+**Fixed**
+
+* missing /wp-admin/includes/plugin.php include
+
 ## 1.0.5 - 2016-03-11
 **Removed**
 
