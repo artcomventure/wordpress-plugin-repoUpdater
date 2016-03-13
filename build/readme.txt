@@ -55,6 +55,10 @@ Although the plugin is not listed on https://wordpress.org/plugins/, you can ...
 
 _We test our plugin through its paces, but we advise you to take all safety precautions before the update. Just in case of the unexpected._
 
+== Questions, concerns, needs, suggestions? ==
+
+Don't hesitate! [Issues](https://github.com/artcomventure/wordpress-plugin-repoUpdater/issues) welcome.
+
 == Changelog ==
 
 = Unreleased =
