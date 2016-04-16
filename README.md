@@ -25,6 +25,8 @@ Keep your plugins, which are not listed on https://wordpress.org/plugins/, alway
 
 Once activated you'll find the 'Repository Connect' settings page listed in the submenu of 'Plugins'.
 
+![image](assets/screenshot-1.png)
+
 1. Choose the plugin which is hosted on GitHub.
 2. Enter (at least) the GitHub _Repository URL_.
   * Optionally enter the _Branch or Release_ to use (default is 'master').
