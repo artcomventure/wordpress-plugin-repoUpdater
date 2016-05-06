@@ -5,24 +5,29 @@
 * Add https://bitbucket.com support
 * Add private support
 
-## 1.0.6 - 2016-03-12 [YANKED]
+## 1.0.7 - 2016-05-06
 **Fixed**
 
-* missing /wp-admin/includes/plugin.php include
+* Delayed plugins update display.
+
+## 1.0.6 - 2016-03-12
+**Fixed**
+
+* Missing /wp-admin/includes/plugin.php include.
 
 ## 1.0.5 - 2016-03-11
 **Removed**
 
-* js detail link replacement on 'Plugins' screen
+* Js detail link replacement on 'Plugins' screen.
 
 **Added**
 
-* Load/show translated plugin data in settings form 
+* Load/show translated plugin data in settings form.
 
 ## 1.0.4 - 2016-03-11
 **Fixed**
 
-* Add plugin slug in plugin update list
+* Add plugin slug in plugin update list.
 
 **Added**
 
@@ -31,12 +36,12 @@
 ## 1.0.3 - 2016-03-10
 **Added**
 
-* ... and changed 'Plugins' screen links
+* ... and changed 'Plugins' screen links.
 
 ## 1.0.2 - 2016-03-10
 **Changed**
 
-* set repo-updater subfolder on activation
+* Set repo-updater subfolder on activation.
 
 ## 1.0.1 - 2016-03-10
 **Added**
@@ -46,4 +51,4 @@
 ## 1.0.0 - 2016-03-10
 **Added**
 
-* Initial file commit
+* Initial file commit.
