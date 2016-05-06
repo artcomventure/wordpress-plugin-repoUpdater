@@ -42,8 +42,13 @@ function repoupdater__site_transient_update_plugins( $value ) {
 
 			// check versions
 			if ( isset( $versions[ $basename ] ) ) {
+				if ( !$current_version = $value->checked[ $basename ] ) {
+					$current_version = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );
+					$current_version = $current_version['Version'];
+				}
+
 				// mark plugin for update
-				if ( version_compare( $versions[ $basename ], $value->checked[ $basename ], '>' ) ) {
+				if ( version_compare( $versions[ $basename ], $current_version, '>' ) ) {
 					$plugin->new_version = $versions[ $basename ];
 					$value->response[ $basename ] = $plugin;
 				} // or not
