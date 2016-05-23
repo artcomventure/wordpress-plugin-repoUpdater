@@ -37,8 +37,16 @@ function repoupdater__site_transient_update_plugins( $value ) {
 				'plugin' => $basename,
 				'slug' => sanitize_title( $plugin_data['Name'] ),
 				'url' => $setting['URL'],
-				'package' => $setting['URL'] . 'zipball/' . ( $setting['branch'] ? $setting['branch'] : 'master' ),
+				'package' => '',
 			);
+
+			// GitHub vs Bitbucket
+			if ( preg_match( '/^https:\/\/github.com\//', $settings[ $basename ]['URL'] ) ) {
+				$plugin->package = $setting['URL'] . 'zipball/' . ( $setting['branch'] ? $setting['branch'] : 'master' );
+			}
+			elseif ( preg_match( '/^https:\/\/bitbucket.org\//', $settings[ $basename ]['URL'] ) ) {
+				$plugin->package = $setting['URL'] . 'get/' . ( $setting['branch'] ? $setting['branch'] : 'tip' ) . '.zip';
+			}
 
 			// check versions
 			if ( isset( $versions[ $basename ] ) ) {

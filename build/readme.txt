@@ -38,16 +38,16 @@ Keep your plugins, which are not listed on https://wordpress.org/plugins/, alway
 
 Once activated you'll find the 'Repository Connect' settings page listed in the submenu of 'Plugins'.
 
-1. Choose the plugin which is hosted on GitHub.
-2. Enter (at least) the GitHub _Repository URL_.
-  * Optionally enter the _Branch or Release_ to use (default is 'master').
+1. Choose the plugin which is hosted on GitHub or Bitbucket.
+2. Enter (at least) the GitHub or Bitbucket _Repository URL_.
+  * Optionally enter the _Branch or Release_ to use (default is 'master' (GitHub) or 'tip' (Bitbucket)).
   * In case the WordPress files in the repository are not located in the root directory, enter the _Subfolder_ where to find them.
 3. Click 'Save Changes'. Your data will be validated.
 4. Go to the 'Plugins' screen, look for updates and proceed as known from WordPress.
 
 == Support of ... ==
 
-* public and (coming soon) privat repositories hosted on [GitHub](https://github.com) and (coming soon) [Bitbucket](https://bitbucket.com)
+* public and (coming soon) privat repositories hosted on [**GitHub**](https://github.com) and [**Bitbucket**](https://bitbucket.org).
 
 == Plugin Updates ==
 
@@ -63,8 +63,12 @@ Don't hesitate! [Issues](https://github.com/artcomventure/wordpress-plugin-repoU
 
 = Unreleased =
 
-* Add https://bitbucket.com support
 * Add private support
+
+= 1.1.0 - 2016-05-23 =
+**Added**
+
+* https://bitbucket.org support.
 
 = 1.0.7 - 2016-05-06 =
 **Fixed**

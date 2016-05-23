@@ -39,7 +39,13 @@
 					);
 
 					if ( array_filter( $settings[ $basename ] ) ) {
-						$settings[ $basename ]['classes'][] = 'github';
+						// GitHub vs Bitbucket
+						if ( preg_match( '/^https:\/\/github.com\//', $settings[ $basename ]['URL'] ) ) {
+							$settings[ $basename ]['classes'][] = 'github';
+						}
+						elseif ( preg_match( '/^https:\/\/bitbucket.org\//', $settings[ $basename ]['URL'] ) ) {
+							$settings[ $basename ]['classes'][] = 'bitbucket';
+						}
 					}
 
 					if ( ! empty( $settings[ $basename ]['URL'] ) && ! isset( $versions[ $basename ] ) ) {
@@ -94,10 +100,10 @@
 							<td>
 								<input type="text" class="regular-text"
 								       value="<?php echo $settings[ $basename ]['branch']; ?>"
-								       name="repoupdater_settings[<?php echo $basename; ?>][branch]" placeholder="master"/>
+								       name="repoupdater_settings[<?php echo $basename; ?>][branch]" placeholder="<?php echo ( in_array( 'github', $settings[ $basename ]['classes'] ) ? 'master' : ( in_array( 'bitbucket', $settings[ $basename ]['classes'] ) ? 'tip' : '' ) ) ?>"/>
 
 								<p class="description">
-									<?php _e( "Which one you want to use? Default is 'master'.", 'repoupdater' ) ?>
+									<?php _e( "Which one you want to use? Default is 'master' (GitHub) or 'tip' (Bitbucket).", 'repoupdater' ) ?>
 								</p>
 							</td>
 						</tr>

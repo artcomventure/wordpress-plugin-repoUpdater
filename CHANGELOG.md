@@ -2,8 +2,12 @@
 
 ## Unreleased
 
-* Add https://bitbucket.com support
 * Add private support
+
+## 1.1.0 - 2016-05-23
+**Added**
+
+* https://bitbucket.org support.
 
 ## 1.0.7 - 2016-05-06
 **Fixed**

@@ -29,7 +29,7 @@ msgstr ""
 msgid "Branch or Release"
 msgstr ""
 
-msgid "Which one you want to use? Default is 'master'."
+msgid "Which one you want to use? Default is 'master' (GitHub) or 'tip' (Bitbucket)."
 msgstr ""
 
 msgid "Subfolder"

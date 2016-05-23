@@ -27,7 +27,7 @@ function repoupdater_settings_page() {
 
 			// check github.com URL format: https://github.com/USERNAME/REPO
 			$url_was_set = !!$setting['URL'];
-			if ( ! preg_match( '/^(https:\/\/github\.com\/[^\/]+\/[^\/]+\/?)(.*)/', $setting['URL'], $setting['URL'] ) ) {
+			if ( ! preg_match( '/^(https:\/\/(github\.com|bitbucket\.org)\/[^\/]+\/[^\/]+\/?)(.*)/', $setting['URL'], $setting['URL'] ) ) {
 				// error message
 				if ( $url_was_set ) {
 					$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );

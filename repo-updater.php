@@ -71,9 +71,22 @@ function repoupdater_versions( $cache = TRUE ) {
 				continue;
 			}
 
-			// build GitHub plugin file raw URL
-			$url = preg_replace( '/^https:\/\/github.com\//', 'https://raw.githubusercontent.com/', $setting['URL'] );
-			$url .= $setting['branch'] ? $setting['branch'] : 'master';
+			// GitHub vs Bitbucket
+
+			$github = '/^https:\/\/github.com\//';
+			$bitbucket = '/^https:\/\/bitbucket.org\//';
+
+			// build plugin file raw URL
+			if ( preg_match( $github, $setting['URL'] ) ) {
+				$url = preg_replace( $github, 'https://raw.githubusercontent.com/', $setting['URL'] );
+				$url .= $setting['branch'] ? $setting['branch'] : 'master';
+			}
+			elseif ( preg_match( $bitbucket, $setting['URL'] ) ) {
+				$url = $setting['URL'] . 'raw/';
+				$url .= $setting['branch'] ? $setting['branch'] : 'tip';
+			}
+			else continue;
+
 			$url .= $setting['subfolder'] ? '/' . $setting['subfolder'] : '';
 			// plugin file
 			$file = explode( '/', $basename );
