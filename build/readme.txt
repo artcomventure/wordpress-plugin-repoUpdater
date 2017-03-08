@@ -65,6 +65,11 @@ Don't hesitate! [Issues](https://github.com/artcomventure/wordpress-plugin-repoU
 
 * Add private support
 
+= 1.1.1 - 2017-03-08 =
+**Fixed**
+
+* Update error on (other) plugin deletion with repoUpdater settings.
+
 = 1.1.0 - 2016-05-23 =
 **Added**
 

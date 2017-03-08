@@ -1,7 +1,6 @@
 #repoupdater-settings {
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
     margin-top: 2em;
 }
 
@@ -55,9 +54,8 @@
     width: 16px;
     height: 16px;
     content: "";
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
     background: none no-repeat scroll center center transparent;
     background-size: cover;
 }
@@ -76,9 +74,8 @@
 
 #repoupdater-settings .panels {
     padding-left: 20px;
-    -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
 }
 
 #repoupdater-settings .panels table thead td {
