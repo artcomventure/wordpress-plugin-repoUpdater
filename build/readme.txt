@@ -65,6 +65,11 @@ Don't hesitate! [Issues](https://github.com/artcomventure/wordpress-plugin-repoU
 
 * Add private support
 
+= 1.1.2 - 2017-07-03 =
+**Fixed**
+
+* Fatal error on names convention.
+
 = 1.1.1 - 2017-03-08 =
 **Fixed**
 

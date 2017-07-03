@@ -76,13 +76,13 @@ function repoupdater__site_transient_update_plugins( $value ) {
  *
  * @param $source
  * @param $remote_source
- * @param $this
+ * @param $upgrader WP_Upgrader instance
  * @param $hook_extra
  *
  * @return string
  */
 add_filter( 'upgrader_source_selection', 'repoupdater_update__upgrader_source_selection', 100, 4 );
-function repoupdater_update__upgrader_source_selection( $source, $remote_source, $this, $hook_extra ) {
+function repoupdater_update__upgrader_source_selection( $source, $remote_source, $upgrader, $hook_extra ) {
 	if ( $settings = get_transient( 'repoupdater_settings' ) ) {
 		if ( isset( $settings[ $hook_extra['plugin'] ] ) ) {
 			// copy (maybe) subfolder to source
