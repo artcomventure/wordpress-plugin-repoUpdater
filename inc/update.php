@@ -43,14 +43,14 @@ function repoupdater__site_transient_update_plugins( $value ) {
 
 			// GitHub vs Bitbucket
 			if ( preg_match( '/^https:\/\/github.com\//', $settings[ $basename ]['URL'] ) ) {
-				$plugin->package = $setting['URL'] . 'zipball/' . ( $setting['branch'] ? $setting['branch'] : 'master' );
+				$plugin->package = $setting['URL'] . 'zipball/' . ( !empty( $setting['branch'] ) ? $setting['branch'] : 'master' );
 			}
 			elseif ( preg_match( '/^https:\/\/bitbucket.org\//', $settings[ $basename ]['URL'] ) ) {
-				$plugin->package = $setting['URL'] . 'get/' . ( $setting['branch'] ? $setting['branch'] : 'tip' ) . '.zip';
+				$plugin->package = $setting['URL'] . 'get/' . ( !empty( $setting['branch'] ) ? $setting['branch'] : 'tip' ) . '.zip';
 			}
 
 			// check versions
-			if ( isset( $versions[ $basename ] ) ) {
+			if ( isset( $versions[ $basename ] ) && isset( $value->checked[ $basename ] ) ) {
 				if ( !$current_version = $value->checked[ $basename ] ) {
 					$current_version = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );
 					$current_version = $current_version['Version'];

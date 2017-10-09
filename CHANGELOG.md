@@ -4,6 +4,11 @@
 
 * Add private support
 
+## 1.1.3 - 2017-10-09
+**Fixed**
+
+* PHP errors.
+
 ## 1.1.2 - 2017-07-03
 **Fixed**
 
