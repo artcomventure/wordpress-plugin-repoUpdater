@@ -30,8 +30,8 @@ function repoupdater__site_transient_update_plugins( $value ) {
 			}
 
 			require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+			if ( !file_exists( WP_PLUGIN_DIR . '/' . $basename ) ) continue;
 			$plugin_data = get_plugin_data( WP_PLUGIN_DIR . '/' . $basename );
-            if ( !$plugin_data['Name'] ) continue;
 
 			// 'create' plugin object
 			$plugin = (object) array(

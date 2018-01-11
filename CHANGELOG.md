@@ -4,6 +4,11 @@
 
 * Add private support
 
+## 1.1.4 - 2018-01-11
+**Fixed**
+
+* Error on (other) plugin deletion with repoUpdater settings.
+
 ## 1.1.3 - 2017-10-09
 **Fixed**
 
